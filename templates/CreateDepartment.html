@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HR Tool</title>
+<meta charset="utf-8">
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Style the header */
+    header {
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    } 
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+      float: left;
+      width: 10%;
+      padding: 20px;
+    }
+    
+    /* Style the list inside the menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul  a:link, a:visited {
+  
+  color: black;
+  padding: 15px 25px;
+  text-align: justify;
+  text-decoration: aqua;
+  display: inline-block;
+}
+    
+    article {
+      float: left;
+      padding: 20px;
+      width: 90%;
+      background-color: #f1f1f1;
+      
+    }
+    
+    /* Clear floats after the columns */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the footer */
+    footer {
+      background-color: #777;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+    </style>
+</head>
+<body>
+<header>
+  <h2>HR Management Tool</h2>
+</header>
+<section>
+
+  <nav>
+    <ul>
+      <li><a href="DisplayEmpInfo">Display Employee Data</a></li>
+      <li><a href="DisplayDeptInfo">Display  Department</a></li>
+      <li><a href="CreatEmployee">Create Employee Data</a></li>
+      <li><a href="CreatDepartment">Creat Department</a></li>
+      <li><a href="CreatJobTitle">Create Job Title</a></li>
+      <li><a href="CreateLocation">Create  Location</a></li>
+    </ul>
+  </nav> 
+  
+  <article>
+    <div class="container">
+      <h2>Create Department Details</h2>
+      <form  method="POST" action="">
+        <div class="form-group">
+          <label for="Depid">Department ID:</label>
+          <input type="number" class="form-control" id="Depid" placeholder="Enter Department ID" name="DepId">
+        </div>
+        <div class="form-group">
+          <label for="DepName">Department Name:</label>
+          <input type="text" class="form-control" id="DepnameID" placeholder="" name="Depname">
+        </div>
+        <div class="form-group">
+          <label for="ManagerId">Manager ID:</label>
+          <input type="number" class="form-control" id="ManagerId" placeholder="" name="ManagerId">
+        </div>
+        <div class="form-group">
+          <label for="ManagerName">Manager Name:</label>
+          <input type="text" class="form-control" id="ManagerName" placeholder="" name="ManagerName">
+        </div>
+        <Input type="submit" class="btn btn-default"></Input>
+      </form>
+    </div>
+  </article>
+</section>
+</body>
+</html>
